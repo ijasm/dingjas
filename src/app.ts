@@ -19,8 +19,14 @@ app.use(async (ctx, next) => {
 
 const router = new Router();
 
-router.get('/ping', async (ctx) => {
-  ctx.body = 'pong';
+router.get('/github/hook', async (ctx) => {
+  console.log("push detected: ", ctx);
+  ctx.body = "ok";
+});
+
+router.post('/github/hook', async (ctx) => {
+  console.log("push detected: ", ctx);
+  ctx.body = "ok";
 });
 
 app.use(router.routes());
