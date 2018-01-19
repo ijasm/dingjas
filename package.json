@@ -1,38 +1,32 @@
 {
-  "name": "dingjas",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.ts",
+  "name": "node-ts-boilerplate",
+  "version": "0.0.1",
+  "description": "Minimal boilerplate for Node.js typescript projects",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "mocha --exit --require ts-node/register test/*.ts",
+    "start": "nodemon -e ts --exec 'ts-node' src/index.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ijasm/dingjas.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ijasm/dingjas/issues"
-  },
-  "homepage": "https://github.com/ijasm/dingjas#readme",
+  "keywords": [],
+  "author": "Ivan Pusic",
+  "license": "MIT",
   "dependencies": {
     "koa": "^2.4.1",
-    "koa-body": "^2.5.0",
-    "koa-router": "^7.3.0",
-    "request-promise": "^4.2.2",
-    "tsoa": "^2.0.1"
+    "koa-router": "^7.3.0"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.8",
+    "@types/chai": "^4.0.5",
+    "@types/koa": "^2.0.41",
+    "@types/koa-router": "^7.0.26",
+    "@types/mocha": "^2.2.44",
     "@types/node": "^8.0.53",
-    "@types/request-promise": "^4.1.39",
-    "jest": "^21.2.1",
-    "ts-jest": "^21.2.3",
-    "ts-loader": "^2.3.7",
+    "@types/supertest": "^2.0.4",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "supertest": "^3.0.0",
     "ts-node": "^3.3.0",
-    "typescript": "^2.6.1",
-    "uglifyjs-webpack-plugin": "^1.1.1",
-    "webpack": "^3.7.1"
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
   }
 }
