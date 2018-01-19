@@ -1,0 +1,38 @@
+{
+  "name": "dingjas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ijasm/dingjas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ijasm/dingjas/issues"
+  },
+  "homepage": "https://github.com/ijasm/dingjas#readme",
+  "dependencies": {
+    "koa": "^2.4.1",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.3.0",
+    "request-promise": "^4.2.2",
+    "tsoa": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.8",
+    "@types/node": "^8.0.53",
+    "@types/request-promise": "^4.1.39",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.2.3",
+    "ts-loader": "^2.3.7",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "webpack": "^3.7.1"
+  }
+}

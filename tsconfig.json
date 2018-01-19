@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		/* General settings */
+		"target": "es5",
+		/* Module settings */
+		"module": "es6",
+		"moduleResolution": "node",
+		/* Compiler settings */
+		"skipLibCheck": true,
+		// "allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"alwaysStrict": true,
+		/* Output Files */
+		"sourceMap": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"preserveConstEnums": true,
+		/* Paths */
+		"types": [
+			"node",
+			"jest"
+		],
+		"lib": [
+			"es6",
+			"es7"
+		]
+	},
+	"exclude": [
+		"**/node_modules/*"
+	]
+}
