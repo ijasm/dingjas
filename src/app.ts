@@ -21,12 +21,12 @@ const router = new Router();
 
 router.get('/github/hook', async (ctx) => {
   console.log("push detected: ", ctx);
-  ctx.body = "ok";
+  ctx.body = ctx;
 });
 
 router.post('/github/hook', async (ctx) => {
   console.log("push detected: ", ctx);
-  ctx.body = "ok";
+  ctx.body = ctx;
 });
 
 app.use(router.routes());
