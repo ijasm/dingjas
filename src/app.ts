@@ -1,7 +1,7 @@
 import * as Koa from 'koa';
 import * as Router from 'koa-router';
 import * as koaBody from "koa-body";
-import * as services from "./services";
+import { cloneGitRepo } from "./GitServices";
 
 const app = new Koa();
 
@@ -23,6 +23,10 @@ const router = new Router();
 
 router.post('/github/hook', koaBody(), (ctx) => {
   console.log("push detected: ", ctx.request.body);
+  const payload = ctx.request.body;
+  const repoURL = payload.repository.url;
+  cloneGitRepo(repoURL);
+
   ctx.body = JSON.stringify(ctx.request.body);
 });
 
