@@ -11,8 +11,10 @@
   "author": "Ivan Pusic",
   "license": "MIT",
   "dependencies": {
+    "git-clone": "^0.1.0",
     "koa": "^2.4.1",
-    "koa-router": "^7.3.0"
+    "koa-router": "^7.3.0",
+    "simple-git": "^1.89.0"
   },
   "devDependencies": {
     "@types/chai": "^4.0.5",
