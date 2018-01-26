@@ -1,4 +1,5 @@
 import * as Koa from 'koa';
+import * as KoaBody from "koa-body";
 import * as Router from 'koa-router';
 
 const app = new Koa();
@@ -19,9 +20,9 @@ app.use(async (ctx, next) => {
 
 const router = new Router();
 
-router.post('/github/hook', async (ctx) => {
-  console.log("push detected: ", ctx.req);
-  ctx.body = "ok";
+router.post('/github/hook', KoaBody(), async (ctx) => {
+  console.log("push detected ", ctx.request.body);
+  ctx.body = JSON.stringify(ctx.request.body);
 });
 
 app.use(router.routes());
