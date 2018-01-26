@@ -1,6 +1,7 @@
 import * as Koa from 'koa';
 import * as KoaBody from "koa-body";
 import * as Router from 'koa-router';
+import * as services from "./services";
 
 const app = new Koa();
 
