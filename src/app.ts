@@ -19,14 +19,9 @@ app.use(async (ctx, next) => {
 
 const router = new Router();
 
-router.get('/github/hook', async (ctx) => {
-  console.log("push detected: ", ctx);
-  ctx.body = ctx;
-});
-
 router.post('/github/hook', async (ctx) => {
-  console.log("push detected: ", ctx);
-  ctx.body = ctx;
+  console.log("push detected: ", ctx.req);
+  ctx.body = "ok";
 });
 
 app.use(router.routes());
